@@ -83,4 +83,4 @@ Los hallazgos clave y las visualizaciones están documentados en los cuadernos d
 Para explorar este proyecto, puedes:
 1.  Revisar los cuadernos de Jupyter (`EDA.ipynb`, `Transformación.ipynb`, `Visualización.ipynb`) para comprender el análisis paso a paso.
 2.  Leer el archivo `Documentación.md` para una explicación detallada del proyecto.
-3.  Examinar los conjuntos de datos en el directorio `csv/`.
+3.  Examinar los conjuntos de datos en el directorio `data/`.
