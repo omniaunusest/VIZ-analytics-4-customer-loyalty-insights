@@ -11,14 +11,14 @@
 
 El proceso de exploración de datos que está documentado ha dado lugar a transformaciones en (2) archivos proporcionados previamente, para optimizar el resultado se han fusionado en un sólo archivo ``.csv``:
 
-**---<---<---<---@ [Flight Loyalty Activity](../data/processed/flight-loyalty-activity.csv)**
+**---<---<---<---@ [Flight Loyalty Activity](data/processed/flight-loyalty-activity.csv)**
 
 ---
 ---
 
 ## Customer Flight Analysis
 
-[Contenido de este dataset](../data/raw/c-flight-activity.csv).
+[Contenido de este dataset](data\raw\c-flight-activity.csv).
 
 ### Loyalty Number
 
@@ -297,7 +297,7 @@ Puede deberse a:
 
 # Customer Loyalty History
 
-[Contenido de este archivo](/data/raw/c-loyalty-history.csv).
+[Contenido de este archivo](data/raw/c-loyalty-history.csv).
 
 ### Loyalty Number
 
