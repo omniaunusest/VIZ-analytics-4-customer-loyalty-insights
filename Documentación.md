@@ -1,16 +1,24 @@
 
-# Documentación: EDA + Transformación
+# Observaciones en el Análisis Exploratorio de Datos, Transformación, Limpieza y Visualización
 
-El proceso de exploración de datos que está documentado, ha dado lugar a transformaciones de datos de dos archivos proporcionados previamente, para mayor optimización se han fusionado en un sólo .csv
+**Índice**
 
-**---<---<---<---@ [Flight Loyalty Activity](/csv/flight-loyalty-activity.csv)** 
+- [Set de datos 1: registros de vuelo por cliente](#customer-flight-analysis)
+- [Set de datos 2: actividad asociada a los programas de fidelidad](#customer-loyalty-history)
+- [Visualización de insights escogidos](#visualización-de-datos)
 
+---
 
+El proceso de exploración de datos que está documentado ha dado lugar a transformaciones en (2) archivos proporcionados previamente, para optimizar el resultado se han fusionado en un sólo archivo ``.csv``:
 
+**---<---<---<---@ [Flight Loyalty Activity](../data/processed/flight-loyalty-activity.csv)**
+
+---
+---
 
 ## Customer Flight Analysis
 
-[Contenido de este archivo](/csv/c-flight-activity.csv).
+[Contenido de este dataset](../data/raw/c-flight-activity.csv).
 
 ### Loyalty Number
 
@@ -26,6 +34,7 @@ El proceso de exploración de datos que está documentado, ha dado lugar a trans
 ||100644ㅤㅤ0.01%
 ||100646ㅤㅤ0.01%
 ||999891ㅤㅤ0.01%<br><br>Valores únicos: **16737**<br>Número de registros: **405624**<br>Valores nulos: **0**<br>Registros duplicados: **388887**|
+
 ---
 
 El **identificador único** presenta duplicados, probablemente debido al número de vuelos realizados por el cliente.
@@ -37,11 +46,10 @@ El **identificador único** presenta duplicados, probablemente debido al número
 |   24 | 16574 |
 | 48 | 162 |
 | 72 | 1 |
----
-     
-       
 
-Ir a [customer loyalty](#customer-loyalty-history) para comparar con la columna de Identificación única de clientes.
+---
+
+→ Ir a [customer loyalty](#customer-loyalty-history) para comparar con la columna de Identificación única de clientes.
 
 **Propuesta de mejora**:
 
@@ -60,8 +68,10 @@ Ir a [customer loyalty](#customer-loyalty-history) para comparar con la columna 
 |-----------|---------------|
 ||2017ㅤㅤ50.0
 ||2018ㅤㅤ50.0<br><br>Valores únicos: **2**<br>Número de registros: **405624**<br>Valores nulos: **0**|
+
 ---
-ㅤㅤ   
+ㅤㅤ
+
 - Registrados 405624 actividades de vuelto en total entre los años 2017 y 2018.
 
 ---
@@ -83,6 +93,7 @@ Ir a [customer loyalty](#customer-loyalty-history) para comparar con la columna 
 ||8ㅤㅤ8.33
 ||10ㅤㅤ8.33
 ||12ㅤㅤ8.33<br><br>Valores únicos: **12**<br>Número de registros: **405624**<br>Valores nulos: **0**|
+
 ---
 
     > La aerolínea presenta un patrón regular en la actividad de sus vuelos.
@@ -116,6 +127,7 @@ Ir a [customer loyalty](#customer-loyalty-history) para comparar con la columna 
 ||19ㅤㅤ0.37
 ||20ㅤㅤ0.28
 ||21ㅤㅤ0.13<br><br>Valores únicos: **22**<br>Número de registros: **405624**<br>Valores nulos: **0**|
+
 ---
 
 Sin anomalías ni mayor observación.
@@ -139,11 +151,11 @@ Sin anomalías ni mayor observación.
 ||9ㅤㅤ0.73
 ||10ㅤㅤ0.26
 ||11ㅤㅤ0.12<br><br>Valores únicos: **12**<br>Número de registros: **405624**<br>Valores nulos: **0**<br>Registros duplicados: **405612**|
+
 ---
 
     > Una mayoría reservó sus vueltos sin acompañante.
     > También es una posibilidad que entre esos valores '0', haya miembros que no han volado. Habría que tener en cuenta este dato a partir de 1.
-
 
 ---
 ---
@@ -164,6 +176,7 @@ Sin anomalías ni mayor observación.
 ||30ㅤㅤ0.04%
 ||31ㅤㅤ0.02%
 ||32ㅤㅤ0.01%<br><br>Valores únicos: **33**<br>Número de registros: **405624**<br>Valores nulos: **0**<br>Registros duplicados: **405591**|
+
 ---
 
     > Casi la mitad de la base de clientes no reservó vuelo alguno.
@@ -187,6 +200,7 @@ Sin anomalías ni mayor observación.
 ||947 ㅤㅤ 0.0%
 ||3187ㅤㅤ0.0%
 ||671 ㅤㅤ 0.0%<br><br>Valores únicos: **4746**<br>Número de registros: **405624**<br>Valores nulos: **0**<br>Registros duplicados: **400878**|
+
 ---
 
 Contaremos para la observación sólo con la base de clientes que sí realizó vuelos.
@@ -212,6 +226,7 @@ Contaremos para la observación sólo con la base de clientes que sí realizó v
 ||565.5 ㅤㅤㅤ 0.0%
 ||474.12 ㅤㅤㅤ0.0%
 ||556.25 ㅤㅤㅤ0.0%<br><br>Valores únicos: **1549**<br>Número de registros: **405624**<br>Valores nulos: **0**|
+
 ---
 
     > La mediana de puntos acumulados es 235.
@@ -235,13 +250,14 @@ Contaremos para la observación sólo con la base de clientes que sí realizó v
 ||834ㅤㅤ0.0%
 ||859ㅤㅤ0.0%
 ||862ㅤㅤ0.0%<br><br>Valores únicos: **587**<br>Número de registros: **405624**<br>Valores nulos: **0**<br>Registros duplicados: **405037**|
+
 ---
 
     > Una gran mayoría (94.04%) no ha redimido sus puntos de viaje.
 
     > El número de clientes que usa sus puntos es 11560 de una base con 16737 clientes registrados.
 
-[Ir a visualización](#programa-de-fidelización-puntos-acumulados)
+→ [Ir a visualización](#programa-de-fidelización-puntos-acumulados)
 
 ---
 ---
@@ -264,8 +280,8 @@ Contaremos para la observación sólo con la base de clientes que sí realizó v
 ||70ㅤㅤ0.01%
 ||69ㅤㅤ0.01%
 ||71ㅤㅤ0.0%<br><br>Valores únicos: **49**<br>Número de registros: **405624**<br>Valores nulos: **0**<br>Registros duplicados: **405575**|
+
 ---
-ㅤㅤ    
 
     > La mayoría de las liquidaciones de puntos no tienen un valor en dólares asociado (el 94.04% está relacionado con 0$).
 
@@ -281,8 +297,7 @@ Puede deberse a:
 
 # Customer Loyalty History
 
-[Contenido de este archivo](csv/c-loyalty-history.csv).
-
+[Contenido de este archivo](/data/raw/c-loyalty-history.csv).
 
 ### Loyalty Number
 
@@ -299,8 +314,8 @@ Puede deberse a:
 ||776187ㅤㅤ0.01%
 ||906428ㅤㅤ0.01%
 ||652627ㅤㅤ0.01%<br><br>Valores únicos: **16737**<br>Número de registros: **16737**<br>Valores nulos: **0**<br>Registros duplicados: **0**|
----
 
+---
 
 ---
 
@@ -311,6 +326,7 @@ Puede deberse a:
 |    dtype: object  |   Country   |
 |-----------|---------------|
 ||Canadaㅤㅤ100.0<br><br>Valores únicos: **1**<br>Número de registros: **16737**<br>Valores nulos: **0**<br>Registros duplicados: **16736**|
+
 ---
 
 Los datos provienen de operativa de vuelos para residentes en Canadá, dado que utilizan el sistema métrico para las distancias, daremos por hecho que éstas usan *Km*.
@@ -335,6 +351,7 @@ Los datos provienen de operativa de vuelos para residentes en Canadá, dado que 
 ||Newfoundlandㅤㅤㅤㅤ1.54
 ||Yukonㅤㅤㅤㅤㅤㅤㅤㅤ0.66
 ||Prince Edward Island ㅤ  0.39<br><br>Valores únicos: **11**<br>Número de registros: **16737**<br>Valores nulos: **0**<br>Registros duplicados: **16726**|
+
 ---
 ㅤ  
 La operativa gestiona vuelos entre 11 provincias.
@@ -350,7 +367,7 @@ La operativa gestiona vuelos entre 11 provincias.
 |-----------|---------------|
 ||Top 5:
 ||Torontoㅤㅤㅤ 20.02%
-||Vancouverㅤㅤ 15.43% 
+||Vancouverㅤㅤ 15.43%
 ||Montreal ㅤ ㅤ  12.3%
 ||Winnipegㅤㅤㅤ3.93%
 ||Whistlerㅤㅤ ㅤ 3.48%
@@ -360,6 +377,7 @@ La operativa gestiona vuelos entre 11 provincias.
 ||Whitehorseㅤㅤ 0.66%
 ||Kelowna ㅤㅤㅤ  0.53%
 ||Charlottetownㅤ0.39%<br><br>Valores únicos: **29**<br>Número de registros: **16737**<br>Valores nulos: **0**<br>Registros duplicados: **16708**|
+
 ---
 ---
 
@@ -381,6 +399,7 @@ La operativa gestiona vuelos entre 11 provincias.
 ||C1A 6E8ㅤㅤ0.39%
 ||H3J 5I6 ㅤㅤ 0.04%
 ||M3R 4K8ㅤㅤ0.02%<br><br>Valores únicos: **55**<br>Número de registros: **16737**<br>Valores nulos: **0**<br>Registros duplicados: **16682**|
+
 ---
 
 Observamos que los clientes se ubican en 29 ciudades, con 55 diferentes códigos postales.
@@ -396,10 +415,10 @@ Observamos que los clientes se ubican en 29 ciudades, con 55 diferentes códigos
 |-----------|---------------|
 ||Femaleㅤㅤ50.25
 ||Maleㅤㅤㅤ49.75<br><br>Valores únicos: **2**<br>Número de registros: **16737**<br>Valores nulos: **0**|
----
 
 ---
 
+---
 
 ### Education
 
@@ -412,15 +431,16 @@ Observamos que los clientes se ubican en 29 ciudades, con 55 diferentes códigos
 ||High School or Belowㅤ ㅤ 4.67
 ||Doctorㅤㅤㅤㅤㅤㅤㅤㅤㅤ4.39
 ||Masterㅤㅤㅤㅤㅤㅤㅤㅤㅤ3.04<br><br>Valores únicos: **5**<br>Número de registros: **16737**<br>Valores nulos: **0**|
+
 ---
 
 El grueso de los clientes se encuentra entre la población con estudios superiores universitarios, pero no especializados mediante maestrías o doctorados.
 
-[Ir a visualización](#nivel-educativo)
+→ [Ir a visualización](#nivel-educativo)
 
 **Propuesta de mejora**:
 
-- La diferencia en el mundo anglosajón entre Bachelor y College es tan ínfima, que podríamos unificarlo y sugerirlo a la empresa de cara a su registro de datos futuros. Ventajas: descarta el espejismo de fragmentación poblacional en el sistema que no es tal.
+- La diferencia en el mundo anglosajón entre Bachelor y College es muy ligera, podríamos unificarlo y sugerirlo a la empresa de cara a su registro de datos futuros. Ventajas: descarta el espejismo de fragmentación poblacional en el registro de clientes.
 
         Por ejemplo:
             
@@ -436,7 +456,6 @@ El grueso de los clientes se encuentra entre la población con estudios superior
             High School or Below      4.67%
             Doctor                    4.39%
             Master                    3.04          
-
 
 ---
 ---
@@ -459,6 +478,7 @@ El grueso de los clientes se encuentra entre la población con estudios superior
 ||73400.0 ㅤㅤㅤ  0.01%
 ||65798.0 ㅤㅤㅤ 0.01%
 ||30767.0 ㅤㅤㅤ 0.01%<br><br>Valores únicos: **5890**<br>Número de registros: **16737**<br>Valores nulos: **4238**<br>Registros duplicados: **10847**|
+
 ---
 
 Hay un 25% de estimación de ingreso desconocida.
@@ -475,6 +495,7 @@ Hay un 25% de estimación de ingreso desconocida.
 ||Marriedㅤㅤ 58.16
 ||Singleㅤㅤㅤ26.79
 ||Divorcedㅤㅤ15.04<br><br>Valores únicos: **3**<br>Número de registros: **16737**<br>Valores nulos: **0**|
+
 ---
 
 ---
@@ -488,6 +509,7 @@ Hay un 25% de estimación de ingreso desconocida.
 ||Starㅤㅤ45.63
 ||Novaㅤㅤ33.88
 ||Auroraㅤㅤ20.49<br><br>Valores únicos: **3**<br>Número de registros: **16737**<br>Valores nulos: **0**|
+
 ---
 
 ---
@@ -510,6 +532,7 @@ Hay un 25% de estimación de ingreso desconocida.
 ||33288.16ㅤㅤ0.01%
 ||31864.86ㅤㅤ0.01%
 ||31758.35ㅤㅤ0.01%<br><br>Valores únicos: **7984**<br>Número de registros: **16737**<br>Valores nulos: **0**<br>Registros duplicados: **8753**|
+
 ---
 
     > La mediana del beneficio total estimado por cliente sería 5780.18$
@@ -521,7 +544,7 @@ Esta disparidad nos indica:
 - Hay clientes cuyo beneficio estimado diverge tan por encima de la media que desvirtúan la estimación.
 - El grueso de la base de clientes es más modesta en estimación de beneficio pero con una media robusta en cantidad.
 
-[Ir a visualización.](#distribución-del-clv)
+→ [Ir a visualización.](#distribución-del-clv)
 
 ---
 ---
@@ -530,14 +553,15 @@ Esta disparidad nos indica:
 
 *Tipo de inscripción del cliente en el programa de lealtad.*
 ㅤㅤ
+
 |    dtype: object  |   Enrollment Type   |
 |-----------|---------------|
 ||Standardㅤㅤㅤㅤㅤ94.2
 ||2018 Promotion ㅤㅤ 5.8<br><br>Valores únicos: **2**<br>Número de registros: **16737**<br>Valores nulos: **0**|
----
 
 ---
 
+---
 
 ### Enrollment Year
 
@@ -552,9 +576,10 @@ Esta disparidad nos indica:
 ||2014ㅤㅤ14.16
 ||2015ㅤㅤ13.93
 ||2012ㅤㅤ10.07<br><br>Valores únicos: **7**<br>Número de registros: **16737**<br>Valores nulos: **0**|
+
 ---
 
-[Ir a visualización.](#relación-de-inscripciones-por-año)
+→ [Ir a visualización.](#relación-de-inscripciones-por-año)
 
 ---
 ---
@@ -577,11 +602,12 @@ Esta disparidad nos indica:
 ||3ㅤㅤ8.11
 ||2ㅤㅤ7.29
 ||1ㅤㅤ7.12<br><br>Valores únicos: **12**<br>Número de registros: **16737**<br>Valores nulos: **0**<br>|
+
 ---
 
 No se aprecia significativamente una tendencia diferencial entre meses, salvo por los dos primeros meses de mes que no parece que favorezcan la adhesión.
 
-[Ir a visualización.](#relación-de-inscripciones-por-mes)
+→ [Ir a visualización.](#relación-de-inscripciones-por-mes)
 
 ---
 ---
@@ -599,12 +625,12 @@ No se aprecia significativamente una tendencia diferencial entre meses, salvo po
 ||2015.0ㅤㅤ1.58
 ||2014.0ㅤㅤ1.08
 ||2013.0ㅤㅤ0.26<br><br>Valores únicos: **6**<br>Número de registros: **16737**<br>Valores nulos: **14670**|
+
 ---
 
 En ausencia de un dato afirmativo, parece indicar que la falta de datos implica la cifra de clientes que siguen adheridos al programa de lealtad.
 
 No obstante, la cancelación parece una tendencia creciente.
-
 
 ---
 ---
@@ -628,6 +654,7 @@ No obstante, la cancelación parece una tendencia creciente.
 ||5.0 ㅤㅤㅤ 0.88
 ||2.0 ㅤㅤㅤ 0.83
 ||4.0 ㅤㅤㅤ 0.81<br><br>Valores únicos: **12**<br>Número de registros: **16737**<br>Valores nulos: **14670**|
+
 ---
 
 Los registros nulos en el campo asociado al mes, son la misma cantidad que en el campo asociado al año.
@@ -639,8 +666,8 @@ Por lo que podemos afirmar:
 ---
 ---
 ㅤ  
-# Visualización de datos
 
+# Visualización de datos
 
 ### Nivel Educativo
 
@@ -679,7 +706,7 @@ Por lo que podemos afirmar:
          alt="Nivel educativo de los clientes"
          width="700" height="400">
     <figcaption>El programa de fidelización tiene una tendencia creciente en inscripciones con el paso de los años hasta la fecha registrada.</figcaption>
-</figure> 
+</figure>
 
 #### Relación de inscripciones por mes
 
